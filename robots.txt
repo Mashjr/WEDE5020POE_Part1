@@ -1,0 +1,5 @@
+WEDE5020POE_Part2/robots.txt
+User-agent: *
+Disallow: /about.html
+Disallow: /contact.html
+Allow: /

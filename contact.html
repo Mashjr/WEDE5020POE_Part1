@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Transitions */
+        nav a {
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: #007bff;
+        }
+
+        /* CSS Animations */
+        .logo-container img {
+            animation: pulse 5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Add a fade-in animation to the contact information */
+        h2 {
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s; /* Delay the animation by 0.5s */
+        }
+
+        li {
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s; /* Delay the animation by 1s */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,25 +65,56 @@
         <img src="logo.png" alt="Lochlogan Waterfront Mall Logo">
     </div>
 </header>
-    
+
     <h1>Contact us</h1>
     <h2>Contact Information:</h2>
 
     <li>Address: 105 Henry Street, Willows, Bloemfontein, 9301, South Africa</li>	
     <li>Phone: +27 51 448 3607</li>
     <li>Email: info@lochlogan.co.za</li>
-    
+
 
     <h2>Operating Hours:</h2>
     <li>Monday to Friday: 9:00 AM -7:00 PM</li>
     <li>Saturday: 9:00 AM - 5:00 PM</li>
     <li>Sunday and Public Holidays: 9:00 AM - 2:00 PM</li>
-    
+
     <h2>Map location</h2>
     <div class="waterfront map location.png-container"><img src="waterfront map location.png" alt="Map location" style="display: block; margin-left: auto; margin-right: auto;"></div>
 
     <footer>
-        <p>&copy; 2025 Lochlogan Waterfront Mall. All rights reserved.</p>
+        <p>&copy; 2025 Mashudu Mashamba. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript for more complex animations or interactions can be added here
+        // Example: Adding a scroll-triggered animation
+
+        window.addEventListener('scroll', function() {
+            const contactInfo = document.querySelector('h2');            const contactDetails = document.querySelectorAll('li');
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 100) { // Adjust the scroll position as needed
+                contactInfo.classList.add('fade-in');
+                contactDetails.forEach(detail => detail.classList.add('fade-in'));
+            }
+        });
+    </script>
+</body>
+</html>
+    <script>
+        // JavaScript for more complex animations or interactions can be added here
+        // Example: Adding a scroll-triggered animation
+
+        window.addEventListener('scroll', function() {
+            const contactInfo = document.querySelector('h2');            const contactDetails = document.querySelectorAll('li');
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 100) { // Adjust the scroll position as needed
+                contactInfo.classList.add('fade-in');
+                contactDetails.forEach(detail => detail.classList.add('fade-in'));
+            }
+        });
+    </script>
 </body>
 </html>
