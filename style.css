@@ -1,32 +1,41 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
+
+/* Header Styles */
 header {
   background: #333;
   color: white;
   padding: 10px 0;
   text-align: center;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
 }
+
 nav {
   margin: 20px 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   padding: 10px 15px;
   margin: 0 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for links */
+}
+
+/* Navigation Hover Effect */
 nav a:hover {
+  background-color: #555; /* Change to a darker shade */
+  color: white; /* Change text color on hover */
 }
-nav a:hover {
-  background-color: #555;
-}
-}
+
+/* Container Styles */
 .container {
   max-width: 800px;
   margin: auto;
@@ -35,15 +44,99 @@ nav a:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Button Styles */
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #555; /* Darker shade on hover */
+}
+
+/* Fade-in Animation for Content */
+.fade-in {
+  animation: fadeIn 0.6s ease-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Scale Animation for Buttons */
+.button-scale {
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.button-scale:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Modal Styles for Enquiry */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content Styles */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  animation: slideIn 0.5s; /* Slide-in animation for modal */
+}
+
+@keyframes slideIn {
+  from {
+      top: -300px; /* Start above */
+      opacity: 0; /* Start invisible */
+  }
+  to {
+      top: 15%; /* End position */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+/* Show Modal */
+.modal.show {
+  display: block; /* Show the modal */
+}
+
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 10px 0;
   background: #333;
   color: white;
-  position:fixed;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  transition: background-color 0.3s ease; /* Smooth transition for footer */
 }
+
+/* Responsive Adjustments */
 @media (max-width: 800px) {
   .content {
       display: flex;
@@ -51,18 +144,20 @@ footer {
   }
 
   .column {
-      flex: 1 1 100%; /* single column on small screens */
+      flex: 1 1 100%; /* Single column on small screens */
   }
 }
 
 @media (min-width: 801px) {
   .content {
-      display: flex; 
+      display: flex;
   }
 }
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   main {
-    padding: 1rem; /* Smaller padding for main content on small screens */
-    margin: 0 10px; /* Margin on the sides for main content */
-  }}
+      padding: 1rem; /* Smaller padding for main content on small screens */
+      margin: 0 10px; /* Margin on the sides for main content */
+  }
+}
